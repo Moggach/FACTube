@@ -28,6 +28,7 @@ export async function getServerSideProps({ req, res }) {
   return fetch(url)
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       return {
         props: {
           catalogue: data,
